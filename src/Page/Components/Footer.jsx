@@ -21,6 +21,7 @@ const Footer = () => {
                 msgStorage = []
             }
             msgStorage.push(msgObj)
+            setMessage("")
             localStorage.setItem("sca_msg", JSON.stringify(msgStorage))
             window.dispatchEvent(new Event("storage"));
         }
