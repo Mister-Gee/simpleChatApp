@@ -8,6 +8,8 @@ import { useSelector } from 'react-redux';
 
 const Chat = () => {
     const [chatMessages, setChatMessages] = useState([])
+    const [chatMessagesCount, setChatMessagesCount] = useState([])
+
     const [offSet, setOffset] = useState(25)
 
      const auth = useSelector(state => state.auth)
@@ -17,6 +19,7 @@ const Chat = () => {
         let msgHistory = JSON.parse(localStorage.getItem("sca_msg"))
          if(msgHistory){
             let data = JSON.parse(localStorage.getItem("sca_msg"))
+            setChatMessagesCount(data.length)
             setChatMessages(data.slice(Math.max(data.length - offSet, 0)))
          }
      }
@@ -49,7 +52,7 @@ const Chat = () => {
         <Frame>
         {auth ? 
         <>
-            {JSON.parse(localStorage.getItem("sca_msg")).length > 25 &&
+            {chatMessagesCount > 25 &&
                 <Row>
                     <Button className='see-more-btn' onClick={handleOffset}>See More</Button>
                 </Row>
