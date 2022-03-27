@@ -13,7 +13,6 @@
 .chat-container{
     background-color: #F5F5F5;
     width: 100%;
-    /* overflow-y: scroll; */
 }
 
 /* Header */
@@ -74,6 +73,8 @@ footer button:hover{
 
 /* Chat section */
 .chat-section{
+    display: flex;
+    flex-direction: column;
     padding: 12px 15px;
     overflow-y: scroll;
     max-height: 80vh;
@@ -171,4 +172,15 @@ footer button:hover{
     -moz-border-radius: 20px !important;
     -ms-border-radius: 20px !important;
     -o-border-radius: 20px !important;
+}
+
+.see-more-btn{
+    background-color: cadetblue !important;
+    border: none !important;
+}
+
+.see-more-btn:hover{
+    background-color: transparent !important;
+    color: cadetblue !important;
+    border: 1px solid cadetblue !important;
 }
