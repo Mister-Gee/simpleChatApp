@@ -71,3 +71,104 @@ footer button{
 footer button:hover{
     font-weight: bold;
 }
+
+/* Chat section */
+.chat-section{
+    padding: 12px 15px;
+    overflow-y: scroll;
+    max-height: 80vh;
+}
+
+/* Incoming & Outgoing Chat Bubble */
+.incoming-chat, .outgoing-chat{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.outgoing-chat{
+    justify-content: right;
+}
+
+.incoming-chat .avatar .iconify{
+    color: cadetblue;
+    margin-right: 20px;
+}
+
+.outgoing-chat .avatar .iconify{
+    color: grey;
+    margin-left: 20px;
+}
+
+.incoming-chat .avatar .iconify,
+.outgoing-chat .avatar .iconify{
+    font-size: 60px;
+    
+}
+
+.incoming-chat .message{
+    background-color: cadetblue;  
+    color: #FFFFFF;
+
+}
+
+.outgoing-chat .message{
+    background-color: grey;  
+    color: #FFFFFF;
+
+}
+
+.incoming-chat .message,
+.outgoing-chat .message{
+    margin-top: 8px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    max-width: 400px;
+    position: relative;
+}
+
+.incoming-chat .message .user,
+.outgoing-chat .message .user{
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.incoming-chat .message .message,
+.outgoing-chat .message .message{
+    margin-top: -10px;
+    padding: 10px 35px 10px 15px;
+}
+
+/* Auth */
+.modal-header{
+    background-color: cadetblue !important;
+}
+
+.modal-header .h4{
+    color: #FFFFFF !important;
+}
+
+.btn-signIn{
+    background-color: cadetblue !important;
+    border: none !important;
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+}
+
+.btn-signIn:hover{
+    font-weight: bold;
+}
+
+.auth-input{
+    border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+}

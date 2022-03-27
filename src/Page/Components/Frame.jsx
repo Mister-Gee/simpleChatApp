@@ -6,7 +6,9 @@ const Frame = ({children}) => {
   return (
     <div className='frame'>
         <Header />
-            {children}
+            <div className='chat-section'>
+                {children}
+            </div>
         <Footer />
     </div>
   )
